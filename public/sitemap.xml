@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://hollow.tech/</loc><priority>1.0</priority></url>
+  <url><loc>https://hollow.tech/about</loc><priority>0.8</priority></url>
+  <url><loc>https://hollow.tech/ecosystem</loc><priority>0.9</priority></url>
+  <url><loc>https://hollow.tech/projects</loc><priority>0.9</priority></url>
+  <url><loc>https://hollow.tech/projects/nix</loc><priority>0.9</priority></url>
+  <url><loc>https://hollow.tech/projects/hollowlink</loc><priority>0.9</priority></url>
+  <url><loc>https://hollow.tech/projects/rafael</loc><priority>0.7</priority></url>
+  <url><loc>https://hollow.tech/projects/iris</loc><priority>0.6</priority></url>
+  <url><loc>https://hollow.tech/projects/sentinel</loc><priority>0.6</priority></url>
+  <url><loc>https://hollow.tech/projects/nova</loc><priority>0.6</priority></url>
+  <url><loc>https://hollow.tech/projects/atlas</loc><priority>0.6</priority></url>
+  <url><loc>https://hollow.tech/projects/sovereign</loc><priority>0.6</priority></url>
+  <url><loc>https://hollow.tech/projects/forge</loc><priority>0.6</priority></url>
+  <url><loc>https://hollow.tech/technology</loc><priority>0.7</priority></url>
+  <url><loc>https://hollow.tech/labs</loc><priority>0.7</priority></url>
+  <url><loc>https://hollow.tech/docs</loc><priority>0.8</priority></url>
+  <url><loc>https://hollow.tech/roadmap</loc><priority>0.7</priority></url>
+  <url><loc>https://hollow.tech/changelog</loc><priority>0.7</priority></url>
+  <url><loc>https://hollow.tech/contact</loc><priority>0.6</priority></url>
+  <url><loc>https://hollow.tech/legal/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://hollow.tech/legal/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://hollow.tech/legal/security</loc><priority>0.4</priority></url>
+</urlset>
