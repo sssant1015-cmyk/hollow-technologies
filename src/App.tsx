@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { PrefsProvider } from './lib/prefs';
 import { Header } from './components/navigation/Header';
 import { Footer } from './components/navigation/Footer';
@@ -56,43 +56,41 @@ function Loading() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <PrefsProvider>
-        <ScrollToTop />
-        <a href="#main" className="btn btn-sm" style={{ position: 'fixed', top: -60, left: 16, zIndex: 200, transition: 'top 0.2s' }}
-          onFocus={(e) => (e.currentTarget.style.top = '12px')} onBlur={(e) => (e.currentTarget.style.top = '-60px')}>
-          Skip to content
-        </a>
-        <Header />
-        <CommandPalette />
-        <main id="main">
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/ecosystem" element={<EcosystemPageLazy />} />
-              <Route path="/projects" element={<ProjectsIndex />} />
-              <Route path="/projects/nix" element={<NixPage />} />
-              <Route path="/projects/hollowlink" element={<HollowLinkPage />} />
-              <Route path="/projects/:slug" element={<ProjectDetail />} />
-              <Route path="/technology" element={<Technology />} />
-              <Route path="/labs" element={<Labs />} />
-              <Route path="/docs" element={<DocsPage />} />
-              <Route path="/docs/:slug" element={<DocsPage />} />
-              <Route path="/roadmap" element={<Roadmap />} />
-              <Route path="/changelog" element={<Changelog />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/legal/privacy" element={<Legal />} />
-              <Route path="/legal/terms" element={<LegalTerms />} />
-              <Route path="/legal/security" element={<LegalSecurity />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-        <div className="grain" aria-hidden="true" />
-      </PrefsProvider>
-    </BrowserRouter>
+    <PrefsProvider>
+      <ScrollToTop />
+      <a href="#main" className="btn btn-sm" style={{ position: 'fixed', top: -60, left: 16, zIndex: 200, transition: 'top 0.2s' }}
+        onFocus={(e) => (e.currentTarget.style.top = '12px')} onBlur={(e) => (e.currentTarget.style.top = '-60px')}>
+        Skip to content
+      </a>
+      <Header />
+      <CommandPalette />
+      <main id="main">
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/ecosystem" element={<EcosystemPageLazy />} />
+            <Route path="/projects" element={<ProjectsIndex />} />
+            <Route path="/projects/nix" element={<NixPage />} />
+            <Route path="/projects/hollowlink" element={<HollowLinkPage />} />
+            <Route path="/projects/:slug" element={<ProjectDetail />} />
+            <Route path="/technology" element={<Technology />} />
+            <Route path="/labs" element={<Labs />} />
+            <Route path="/docs" element={<DocsPage />} />
+            <Route path="/docs/:slug" element={<DocsPage />} />
+            <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/changelog" element={<Changelog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/legal/privacy" element={<Legal />} />
+            <Route path="/legal/terms" element={<LegalTerms />} />
+            <Route path="/legal/security" element={<LegalSecurity />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </main>
+      <Footer />
+      <div className="grain" aria-hidden="true" />
+    </PrefsProvider>
   );
 }
 
