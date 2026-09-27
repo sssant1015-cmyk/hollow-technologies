@@ -12,16 +12,15 @@ fonts.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&fa
 document.head.appendChild(fonts);
 
 // React Router needs the deploy base path on GitHub Pages ("/hollow-technologies/").
-// Locally Vite serves at "/", so derive it from where the script is loaded from.
-const script = document.querySelector('script[type="module"]') as HTMLScriptElement | null;
-const basePath = script?.src
-  ? new URL('.', script.src).pathname.replace(/\/$/, '')
-  : '';
+// Derive it from the URL itself: on Pages the app always lives under
+// /hollow-technologies/; locally there is no subpath.
+const pathParts = location.pathname.split('/').filter(Boolean);
 const isPagesDeploy = location.hostname.endsWith('github.io');
+const basename = isPagesDeploy && pathParts[0] ? `/${pathParts[0]}` : '/';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename={isPagesDeploy && basePath ? basePath : '/'}>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>,
